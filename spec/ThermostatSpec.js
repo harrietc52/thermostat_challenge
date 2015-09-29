@@ -20,16 +20,7 @@ describe("Thermostat", function() {
   });
 
   it("temperature can not do below 10 degrees", function() {
-    thermostat.downTemp();
-    thermostat.downTemp();
-    thermostat.downTemp();
-    thermostat.downTemp();
-    thermostat.downTemp();
-    thermostat.downTemp();
-    thermostat.downTemp();
-    thermostat.downTemp();
-    thermostat.downTemp();
-    thermostat.downTemp();
+    thermostat.temperature = 10
     expect(function() { thermostat.downTemp();
   }).toThrowError("Minimum temperature is 10 degrees");
   });
@@ -44,32 +35,21 @@ describe("Thermostat", function() {
   });
 
   it("when power saving is on, max temp is 25", function() {
-    thermostat.upTemp();
-    thermostat.upTemp();
-    thermostat.upTemp();
-    thermostat.upTemp();
-    thermostat.upTemp();
+    thermostat.temperature = 25
     expect(function() { thermostat.upTemp();
   }).toThrowError("Power saving 'on', can not go above 25 degrees");
   });
 
-  // it("when power saving is off, max temp is 32", function() {
-  //   thermostat.powerSavingOff
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   thermostat.upTemp();
-  //   expect(function() { thermostat.upTemp();
-  // }).toThrowError("Power saving 'off', can not go above 32 degrees");
-  // });
+  it("when power saving is off, max temp is 32", function() {
+    thermostat.powerSavingOff();
+    thermostat.temperature = 32
+    expect(function() { thermostat.upTemp();
+  }).toThrowError("Power saving 'off', can not go above 32 degrees");
+  });
 
-
+  it("will reset temperature to 20 when resetting", function() {
+    thermostat.temperature = 25
+    thermostat.reset();
+    expect(thermostat.temperature).toEqual(20);
+  })
 });
