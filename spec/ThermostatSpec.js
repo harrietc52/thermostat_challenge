@@ -83,7 +83,6 @@ describe("Thermostat", function() {
     });
   });
 
-
   describe('reset temperature', function() {
     it("will reset temperature to 20 when resetting", function() {
       thermostat.temperature = 25
@@ -108,8 +107,6 @@ describe("Thermostat", function() {
   });
 
 });
-
-
 
     // it("when power saving is turned on, if temperature > 25, it will reset to 25", function() {
     //   thermostat.powerSaving = false;
