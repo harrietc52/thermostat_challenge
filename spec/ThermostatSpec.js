@@ -110,6 +110,7 @@ describe("Thermostat", function() {
 });
 
 
+
     // it("when power saving is turned on, if temperature > 25, it will reset to 25", function() {
     //   thermostat.powerSaving = false;
     //   thermostat.temperature = 30

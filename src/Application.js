@@ -6,10 +6,10 @@ $( document ).ready (function() {
     thermostat.upTemp();
     $('#temp').text(thermostat.temperature);
   });
-
-  $('#downTemp').click(function() {
-    thermostat.downTemp();
-    $('#temp').text(thermostat.temperature);
-  });
+  //
+  // $('#downTemp').click(function() {
+  //   thermostat.downTemp();
+  //   $('#temp').text(thermostat.temperature);
+  // });
 
 });
