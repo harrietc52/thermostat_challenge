@@ -5,6 +5,8 @@ $( document ).ready (function() {
   $('#upTemp').click(function() {
     thermostat.upTemp();
     $('#temp').text(thermostat.temperature);
+    $('#temp').css("color", thermostat.setColour);
+
   });
 
   $('#downTemp').click(function() {

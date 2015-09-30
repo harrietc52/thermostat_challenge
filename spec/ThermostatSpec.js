@@ -100,34 +100,20 @@ describe("Thermostat", function() {
 
   describe('energy efficiency', function() {
     it('shows colour green when temperature <= 18', function() {
-      thermostat.temperature = 18
-      expect(thermostat.energyUsage()).toEqual('green');
+      thermostat.temperature = 16
+      thermostat.upTemp();
+      expect(thermostat.colour).toEqual('green');
     });
     it('shows colour yellow when temperature  > 18 and < 25', function() {
       thermostat.temperature = 20
-      expect(thermostat.energyUsage()).toEqual('yellow');
+      thermostat.upTemp();
+      expect(thermostat.colour).toEqual('yellow');
     });
     it('shows colour red when temperature >= 25', function() {
       thermostat.temperature = 25
-      expect(thermostat.energyUsage()).toEqual('red');
+      thermostat.upTemp();
+      expect(thermostat.colour).toEqual('red');
     });
   });
 
-  // describe('converter', function() {
-  //   it('can convert celcius to fahrenheit', function() {
-  //     thermostat.c2f();
-  //     expect(thermostat.temperature).toEqual('');
-  //   });
-  // });
-
 });
-
-
-    //
-    // it("when power saving is turned off, temperature will not change", function() {
-    //
-    //   thermostat.temperature = 30
-    //   thermostat.powerSaving = false;
-    //   thermostat.reset();
-    //   expect(thermostat.temperature).toEqual(30);
-    // });

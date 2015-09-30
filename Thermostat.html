@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
   <title>Thermostat</title>
   <script src='lib/jquery.js'></script>
   <script src="src/Thermostat.js"></script>
   <script src="src/Application.js"></script>
+  <meta charset="utf-8">
 </head>
 <body>
-  <div class="boxed" style="border:1px solid black; width:180px">
-
-    <div>
-      <span id='temp'></span>
-    </div>
-    <div>
-      <button id='upTemp'>Up</button>
-      <button id='downTemp'>Down</button>
-    </div>
-    <div>
-      Power Saving Mode<input type="checkbox" id='changePowerSaving' checked="ON">
-    </div>
-    <div>
-      <button id='reset'>RESET</button>
-    </div>
-
+  <div><h1><span id='temp'></span>°C</h1></div>
+  <button id='upTemp'>Up</button>
+  <button id='downTemp'>Down</button>
+  </div>
+  <div>
+    Power Saving Mode<input type="checkbox" id='changePowerSaving' checked="ON">
+  </div>
+  <div>
+    <button id='reset'>RESET</button>
   </div>
 </body>
 </html>
