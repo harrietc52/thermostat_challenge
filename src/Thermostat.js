@@ -32,6 +32,6 @@ function Thermostat() {
 
   Thermostat.prototype.energyUsage = function() {
     if(this.temperature <= 18) return "green";
-    if (this.temperature > 18 && this.temperature <= 25) return "yellow";
-    if (this.temperature > 25) return "red";
+    if(this.temperature > 18 && this.temperature < 25) return "yellow";
+    if(this.temperature >= 25) return "red";
   };

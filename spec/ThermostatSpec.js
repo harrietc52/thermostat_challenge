@@ -97,12 +97,12 @@ describe("Thermostat", function() {
       thermostat.temperature = 18
       expect(thermostat.energyUsage()).toEqual('green');
     });
-    it('shows colour yellow when temperature  > 18 and <= 25', function() {
+    it('shows colour yellow when temperature  > 18 and < 25', function() {
       thermostat.temperature = 20
       expect(thermostat.energyUsage()).toEqual('yellow');
     });
-    it('shows colour red when temperature > 25', function() {
-      thermostat.temperature = 26
+    it('shows colour red when temperature >= 25', function() {
+      thermostat.temperature = 25
       expect(thermostat.energyUsage()).toEqual('red');
     });
   });
