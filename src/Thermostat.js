@@ -21,3 +21,17 @@ function Thermostat() {
   Thermostat.prototype.reset = function() {
       this.temperature = 20;
   };
+
+  Thermostat.prototype.changePowerSaving = function() {
+    if(this.powerSaving) {
+      this.powerSaving = false;
+    } else {
+      this.powerSaving = true;
+    };
+  };
+
+  Thermostat.prototype.energyUsage = function() {
+    if(this.temperature <= 18) return "green";
+    if (this.temperature > 18 && this.temperature <= 25) return "yellow";
+    if (this.temperature > 25) return "red";
+  };
