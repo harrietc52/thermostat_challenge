@@ -24,6 +24,13 @@ describe("Thermostat", function() {
     expect(thermostat.powerSaving).toBe(true);
   });
 
+  // it("when power saving is turned on, if temperature > 25, it will reset to 25", function() {
+  //   thermostat.powerSaving = false;
+  //   thermostat.temperature = 30
+  //   thermostat.powerSaving = true;
+  //   expect(thermostat.temperature).toEqual(25);
+  // });
+
   describe('maximum temperature', function() {
     it('is 25 degrees with power saving on', function() {
       expect(thermostat.maxTemp()).toEqual(25);
@@ -108,13 +115,7 @@ describe("Thermostat", function() {
 
 });
 
-    // it("when power saving is turned on, if temperature > 25, it will reset to 25", function() {
-    //   thermostat.powerSaving = false;
-    //   thermostat.temperature = 30
-    //   thermostat.powerSaving = true;
-    //   thermostat.reset();
-    //   expect(thermostat.temperature).toEqual(25);
-    // });
+
     //
     // it("when power saving is turned off, temperature will not change", function() {
     //
