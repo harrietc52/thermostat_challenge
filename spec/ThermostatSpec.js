@@ -18,11 +18,11 @@ describe("Thermostat", function() {
     expect(thermostat.powerSaving).toBe(false);
   });
 
-  // it("can turn power saving on", function() {
-  //   thermostat.powerSaving = true;
-  //   thermostat.changePowerSaving();
-  //   expect(thermostat.powerSaving).toBe(true);
-  // });
+  it("can turn power saving on", function() {
+    thermostat.powerSaving = false;
+    thermostat.changePowerSaving();
+    expect(thermostat.powerSaving).toBe(true);
+  });
 
   describe('maximum temperature', function() {
     it('is 25 degrees with power saving on', function() {

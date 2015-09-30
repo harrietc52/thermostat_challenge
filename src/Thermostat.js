@@ -23,11 +23,7 @@ function Thermostat() {
   };
 
   Thermostat.prototype.changePowerSaving = function() {
-    if(this.powerSaving) {
-      this.powerSaving = false;
-    } else {
-      this.powerSaving = true;
-    };
+    this.powerSaving = !this.powerSaving
   };
 
   Thermostat.prototype.energyUsage = function() {
