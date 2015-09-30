@@ -31,3 +31,5 @@ function Thermostat() {
     if(this.temperature > 18 && this.temperature < 25) return "yellow";
     if(this.temperature >= 25) return "red";
   };
+
+thermostat = new Thermostat
