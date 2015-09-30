@@ -113,6 +113,13 @@ describe("Thermostat", function() {
     });
   });
 
+  // describe('converter', function() {
+  //   it('can convert celcius to fahrenheit', function() {
+  //     thermostat.c2f();
+  //     expect(thermostat.temperature).toEqual('');
+  //   });
+  // });
+
 });
 
 

@@ -15,13 +15,11 @@ $( document ).ready (function() {
   $('#changePowerSaving').click(function() {
     thermostat.changePowerSaving();
     $('#temp').text(thermostat.temperature);
-    //
-    // if(thermostat.changePowerSaving == true){
-      // $('#changePowerSaving').text('ON');
-    //  }
-    // else if(thermostat.changePowerSaving == false) {
-    //   $('#changePowerSaving').text('OFF');
-    // };
+  });
+
+  $('#reset').click(function() {
+    thermostat.reset();
+    $('#temp').text(thermostat.temperature);
   });
 
 });

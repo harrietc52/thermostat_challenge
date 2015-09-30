@@ -41,4 +41,12 @@ function Thermostat() {
     if(this.temperature >= 25) return "red";
   };
 
+  // Thermostat.prototype.c2f = function() {
+  //   return this.temperature * 9.0 / 5 + 32;
+  // };
+  //
+  // Thermostat.prototype.f2c = function() {
+  //   (this.temperature - 32) * 5 / 9.0
+  // };
+
 thermostat = new Thermostat
