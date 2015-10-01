@@ -25,6 +25,10 @@ function Thermostat() {
   Thermostat.prototype.reset = function() {
     this.temperature = 20;
     this.setColour();
+    if (this.powerSaving === false) {
+      this.powerSaving = true;
+      document.getElementById("changePowerSaving").checked = true;
+    }
   };
 
   Thermostat.prototype.changePowerSaving = function() {

@@ -98,7 +98,7 @@ describe("Thermostat", function() {
     });
   });
 
-  describe('energy efficiency', function() {
+  describe('sets colour', function() {
     it('shows colour green when temperature <= 18', function() {
       thermostat.temperature = 16
       thermostat.upTemp();
