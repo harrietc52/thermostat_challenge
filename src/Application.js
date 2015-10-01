@@ -17,6 +17,7 @@ $( document ).ready (function() {
   $('#changePowerSaving').click(function() {
     thermostat.changePowerSaving();
     $('#temp').text(thermostat.temperature);
+    $('#temp').css("color", thermostat.colour);
   });
 
   $('#reset').click(function() {
