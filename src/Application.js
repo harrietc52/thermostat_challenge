@@ -26,18 +26,16 @@ $( document ).ready (function() {
     $('#temp').css("color", thermostat.colour);
   });
 
-  var location = window.location.search;
-  // alert('help');
-  console.log(location);
-
   var url = window.location.href
   var city = url.split("?location=");
-  var currentCity = city[1]
+  var x = city[1]
+  var currentCity = x.replace('+', ' ')
+
   console.log(currentCity)
   // console.log(window.location.search);
 
   $.ajax({
-    url: 'http://api.openweathermap.org/data/2.5/weather?q={london}',
+    url: 'http://api.openweathermap.org/data/2.5/weather?q={' + currentCity +'}',
     success: function(data){
       console.log(data)
       $('#weather').html('Current temperature in ' + (data.name)+ ': ' + (data.main.temp - 273.15).toFixed(1))
