@@ -56,5 +56,10 @@ function Thermostat() {
     }
   };
 
+Thermostat.prototype.url = function() {
+  var url = window.location.href
+  var city = url.split("?location=");
+  return city[1]
+};
 
 thermostat = new Thermostat

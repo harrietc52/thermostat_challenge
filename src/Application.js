@@ -29,7 +29,12 @@ $( document ).ready (function() {
   var location = window.location.search;
   // alert('help');
   console.log(location);
-  console.log(window.location.search);
+
+  var url = window.location.href
+  var city = url.split("?location=");
+  var currentCity = city[1]
+  console.log(currentCity)
+  // console.log(window.location.search);
 
   $.ajax({
     url: 'http://api.openweathermap.org/data/2.5/weather?q={london}',
