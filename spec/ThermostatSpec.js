@@ -104,7 +104,7 @@ describe("Thermostat", function() {
       thermostat.upTemp();
       expect(thermostat.colour).toEqual('green');
     });
-    
+
     it('shows colour yellow when temperature  > 18 and < 25', function() {
       thermostat.temperature = 20
       thermostat.upTemp();

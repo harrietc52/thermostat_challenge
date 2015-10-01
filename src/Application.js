@@ -32,7 +32,6 @@ $( document ).ready (function() {
   var currentCity = x.replace('+', ' ')
 
   console.log(currentCity)
-  // console.log(window.location.search);
 
   $.ajax({
     url: 'http://api.openweathermap.org/data/2.5/weather?q={' + currentCity +'}',
@@ -41,6 +40,5 @@ $( document ).ready (function() {
       $('#weather').html('Current temperature in ' + (data.name)+ ': ' + (data.main.temp - 273.15).toFixed(1))
     }
   });
-
 
 });
