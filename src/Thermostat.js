@@ -56,4 +56,5 @@ function Thermostat() {
     }
   };
 
+
 thermostat = new Thermostat
