@@ -30,7 +30,7 @@ $( document ).ready (function() {
     url: 'http://api.openweathermap.org/data/2.5/weather?q={london}',
     success: function(data){
       console.log(data)
-      $('#weather').html('Current Temperatre  ' + (data.main.temp - 273).toFixed(1))
+      $('#weather').html('Current temperature in ' + (data.name)+ ': ' + (data.main.temp - 273.15).toFixed(1))
     }
   });
 
