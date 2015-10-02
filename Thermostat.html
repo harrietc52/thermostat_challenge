@@ -7,33 +7,41 @@
   <meta charset="utf-8">
 </head>
 <body>
-  <div id='Thermostat'>
-    <h1>Thermostat</h1>
-    <h2><span id='temp'></span>°C</h2>
-    <button id='upTemp'>Up</button>
-    <button id='downTemp'>Down</button>
-    <div>
-      Power Saving Mode<input type="checkbox" id='changePowerSaving' checked="ON">
+  <div id='not-map'>
+    <div id='Thermostat'>
+      <h1>Thermostat</h1>
+      <h2><span id='temp'></span>°C</h2>
+      <button id='upTemp'>Up</button>
+      <button id='downTemp'>Down</button>
+      <div>
+        Power Saving Mode<input type="checkbox" id='changePowerSaving' checked="ON">
+      </div>
+      <div>
+        <button id='reset'>RESET</button>
+      </div>
+      <div id="weather"></div>
+      <div id='current-city'>
+        Current city:
+        <input type='text' name='location' id='currentCity'>
+        <button id="submit">Go</button>
+      </div>
     </div>
-    <div>
-      <button id='reset'>RESET</button>
-    </div>
-    <div id="weather"></div>
-    <div id='current-city'>
-      Current city:
-      <input type='text' name='location' id='currentCity'>
-      <!-- <input type='submit' value='Go' id='button'> -->
-      <button id="submit">Go</button>
+
+    <div id='user-place'>
+      Current position: <span id='position-name'></span>
+      <span id='position-coords'></span>
     </div>
   </div>
 
-  <div id='position'>
-    Current position:<br>
+  <div id='map'>
+
   </div>
 
   <script src="src/Thermostat.js"></script>
   <script src="src/Application.js"></script>
   <script src="src/Position.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSsh7DRy4BsQ1OWx6ZhJWfOkpnlXV04IM&callback=initMap"
+        async defer></script>
 
 </body>
 </html>

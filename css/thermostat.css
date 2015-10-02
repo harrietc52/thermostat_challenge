@@ -3,6 +3,8 @@ div {
   width: 50%;
 }
 
-  #position {
+  #map {
     float: right;
+    width: 500px;
+    height: 400px;
   }
