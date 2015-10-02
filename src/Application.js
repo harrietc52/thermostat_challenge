@@ -26,7 +26,8 @@ $( document ).ready (function() {
     $('#temp').css("color", thermostat.colour);
   });
 
-  var currentCity = "london"
+  var currentCity = "London"
+
   $('#submit').click(function() {
     currentCity = $('#currentCity').val();
     locationReset();

@@ -1,0 +1,8 @@
+div {
+  display: inline-block;
+  width: 50%;
+}
+
+  #position {
+    float: right;
+  }
