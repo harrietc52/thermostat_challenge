@@ -21,10 +21,10 @@ function getWeather() {
 };
 
 function weatherRequest(position) {
-  var lat = position.coords.latitude.toFixed(2)
-  var lon = position.coords.longitude.toFixed(2)
+  var lat = position.coords.latitude
+  var lon = position.coords.longitude
    $.ajax({
-   url: 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat +'&lon=' + lon + '',
+   url: 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat.toFixed(2) +'&lon=' + lon.toFixed(2) + '',
    success: function(data){
      console.log(data)
      $('#position-name').html(data.name);
@@ -36,6 +36,9 @@ function weatherRequest(position) {
 getLocation();
 getWeather();
 
+console.log(lat)
+console.log(lon)
+
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -43,5 +46,3 @@ function initMap() {
     zoom: 8
   });
 }
-
-
