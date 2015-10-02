@@ -26,19 +26,23 @@ $( document ).ready (function() {
     $('#temp').css("color", thermostat.colour);
   });
 
-  var url = window.location.href
-  var city = url.split("?location=");
-  var x = city[1]
-  var currentCity = x.replace('+', ' ')
+  var currentCity = "london"
+  $('#submit').click(function() {
+    currentCity = $('#currentCity').val();
+    locationReset();
+  });
 
   console.log(currentCity)
 
-  $.ajax({
-    url: 'http://api.openweathermap.org/data/2.5/weather?q={' + currentCity +'}',
-    success: function(data){
-      console.log(data)
-      $('#weather').html('Current temperature in ' + (data.name)+ ': ' + (data.main.temp - 273.15).toFixed(1))
-    }
-  });
+   locationReset = function() {
+      $.ajax({
+      url: 'http://api.openweathermap.org/data/2.5/weather?q={' + currentCity +'}',
+      success: function(data){
+        console.log(data)
+        $('#weather').html('Current temperature in ' + currentCity + ': ' + (data.main.temp - 273.15).toFixed(1))
+      }
+    });
+  };
+  locationReset();
 
 });
